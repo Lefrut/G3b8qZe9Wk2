@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.G3b8qZe9Wk2.Light" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorSurface">@color/white</item>
+        <item name="colorPrimary">#6FB54B</item>
+        <item name="colorOnSurface">@color/black</item>
+        <item name="colorOnSurfaceVariant">#FFAEB0B6</item>
+        <item name="colorOutline">#EFEFF0</item>
+        <item name="colorOutlineVariant">#484C4C</item>
+
+        <item name="textAppearanceTitleSmall">@style/TextAppearance.Binet.TitleSmall</item>
+
+        <item name="textAppearanceHeadlineMedium">@style/TextAppearance.Binet.HeadlineMedium</item>
+        <item name="textAppearanceHeadlineSmall">@style/TextAppearance.Binet.HeadlineSmall</item>
+
+        <item name="textAppearanceBodyMedium">@style/TextAppearance.Binet.BodyMedium</item>
+        <item name="textAppearanceBodySmall">@style/TextAppearance.Binet.BodySmall</item>
+
+        <item name="textAppearanceButton">@style/TextAppearance.Binet.Button</item>
+
+    </style>
+
+    <style name="Theme.G3b8qZe9Wk2" parent="Theme.G3b8qZe9Wk2.Light">
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <item name="android:navigationBarColor">?attr/colorSurface</item>
+    </style>
+
+</resources>

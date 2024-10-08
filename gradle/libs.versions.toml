@@ -1,0 +1,39 @@
+[versions]
+adapterdelegates4KotlinDsl = "4.3.0"
+agp = "8.6.0"
+koinAndroid = "3.4.0"
+koinAndroidxFragment = "3.4.0"
+koinAndroidxViewmodel = "3.4.0"
+kotlin = "1.9.0"
+coreKtx = "1.13.1"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+ktorClientAndroid = "2.3.4"
+ktorClientCore = "2.3.4"
+ktorClientLogging = "2.3.4"
+ktorClientSerialization = "2.3.4"
+lifecycleRuntimeKtx = "2.8.6"
+material = "1.12.0"
+
+[libraries]
+adapterdelegates4-kotlin-dsl = { module = "com.hannesdorfmann.adapterdelegates4:adapterdelegates4-kotlin-dsl", version.ref = "adapterdelegates4KotlinDsl" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koinAndroid" }
+koin-androidx-fragment = { module = "io.insert-koin:koin-androidx-fragment", version.ref = "koinAndroidxFragment" }
+koin-androidx-viewmodel = { module = "io.insert-koin:koin-androidx-viewmodel", version.ref = "koinAndroidxViewmodel" }
+ktor-client-android = { module = "io.ktor:ktor-client-android", version.ref = "ktorClientAndroid" }
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktorClientCore" }
+ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktorClientLogging" }
+ktor-client-serialization = { module = "io.ktor:ktor-client-serialization", version.ref = "ktorClientSerialization" }
+material = { module = "com.google.android.material:material", version.ref = "material" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
