@@ -18,7 +18,6 @@
         <item name="textAppearanceBodySmall">@style/TextAppearance.Binet.BodySmall</item>
 
         <item name="textAppearanceButton">@style/TextAppearance.Binet.Button</item>
-
     </style>
 
     <style name="Theme.G3b8qZe9Wk2" parent="Theme.G3b8qZe9Wk2.Light">

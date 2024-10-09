@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.ir.backend.js.compile
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -9,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId = "com.binet.G3b8qZe9Wk2"
-        minSdk = 21
+        minSdk = 24
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -36,12 +38,6 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    buildFeatures {
-        compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
-    }
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
@@ -53,23 +49,27 @@ dependencies {
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
-
     implementation(libs.material)
+    implementation("androidx.fragment:fragment-ktx:1.8.4")
 
     
-    implementation(libs.ktor.client.core)
-    implementation(libs.ktor.client.android) 
-    implementation(libs.ktor.client.serialization)
-    implementation(libs.ktor.client.logging) 
+//    implementation(libs.ktor.client.core)
+//    implementation(libs.ktor.client.android)
+//    implementation(libs.ktor.client.serialization)
+//    implementation(libs.ktor.client.logging)
+//
+//
+//    compileOnly(libs.koin.core)
+//    implementation(libs.koin.android)
+//    implementation(libs.koin.androidx.viewmodel)
+//
+//
+//    implementation(libs.androidx.appcompat)
+//    implementation(libs.androidx.activity)
+//    implementation(libs.androidx.constraintlayout)
 
-    
-    implementation(libs.koin.android)
-    implementation(libs.koin.androidx.viewmodel) 
-    implementation(libs.koin.androidx.fragment) 
-
-    
-    implementation(libs.adapterdelegates4.kotlin.dsl)
-
+    implementation(libs.hannesdorfmann.adapterdelegates4.kotlin.dsl)
+    implementation(libs.coil)
 
 
     testImplementation(libs.junit)
