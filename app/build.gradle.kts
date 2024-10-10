@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.ir.backend.js.compile
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    kotlin("plugin.serialization") version "1.9.0"
 }
 
 android {
@@ -41,39 +42,33 @@ android {
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
+            excludes += "/META-INF/*"
         }
     }
 }
 
 dependencies {
 
+    implementation(libs.ktor.client.core)
+    implementation(libs.ktor.client.cio)
+    implementation(libs.ktor.client.logging)
+    implementation(libs.ktor.client.content.negotiation)
+    implementation(libs.ktor.serialization.kotlinx.json)
+    implementation(libs.logback.classic)
+
+    runtimeOnly(libs.koin.core)
+    implementation(libs.koin.android)
+
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.material)
-    implementation("androidx.fragment:fragment-ktx:1.8.4")
+    implementation(libs.androidx.fragment.ktx)
 
-    
-//    implementation(libs.ktor.client.core)
-//    implementation(libs.ktor.client.android)
-//    implementation(libs.ktor.client.serialization)
-//    implementation(libs.ktor.client.logging)
-//
-//
-//    compileOnly(libs.koin.core)
-//    implementation(libs.koin.android)
-//    implementation(libs.koin.androidx.viewmodel)
-//
-//
-//    implementation(libs.androidx.appcompat)
-//    implementation(libs.androidx.activity)
-//    implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
 
     implementation(libs.hannesdorfmann.adapterdelegates4.kotlin.dsl)
     implementation(libs.coil)
-
-
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation(libs.androidx.ui.test.junit4)
 }
