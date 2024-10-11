@@ -11,12 +11,11 @@
 
     <com.google.android.material.appbar.MaterialToolbar
         app:navigationIconTint="?attr/colorSurface"
+        android:visibility="gone"
         android:id="@+id/top_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
-        app:menu="@menu/top_menu"
-        app:navigationIcon="@drawable/arrow_back_24"
         app:title="@string/list"
         app:titleCentered="false"
         app:titleTextAppearance="?attr/textAppearanceTitleSmall"

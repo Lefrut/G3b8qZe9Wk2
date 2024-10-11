@@ -23,7 +23,8 @@ class HomeViewModel(
         loadMedications()
     }
 
-    private fun loadMedications(search: String? = null) = viewModelScope.launch {
+    fun loadMedications(search: String? = null) = viewModelScope.launch {
+        _isLoading.update { true }
         binetRepository.getMedications(search).onSuccess { medications ->
             _isLoading.update { false }
             _medicationsState.update { medications }

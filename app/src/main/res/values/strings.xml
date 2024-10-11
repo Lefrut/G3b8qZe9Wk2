@@ -1,11 +1,12 @@
 <resources>
     <string name="app_name">Binet</string>
     <string name="list">Список</string>
-    <string name="search">Search</string>
+    <string name="search">Поиск</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="insecticides_title">Вредители однолетних зерновых бобовых культур</string>
     <string name="Insecticides_desc">На зернобобовых культурах питаются разнообразные многоядные и еще всякие гадости....</string>
     <string name="dressing_agent_title">Вредители зерновых культур</string>
     <string name="dressing_agent_desc">Состав вредителей зерновых культур обширен и разнообразен. Более 130 видов ...</string>
+    <string name="where_buy">Где купить</string>
 </resources>

@@ -45,6 +45,8 @@ android {
             excludes += "/META-INF/*"
         }
     }
+
+    buildFeatures.viewBinding = true
 }
 
 dependencies {
@@ -71,4 +73,5 @@ dependencies {
 
     implementation(libs.hannesdorfmann.adapterdelegates4.kotlin.dsl)
     implementation(libs.coil)
+    implementation(libs.coil3.coil.network.okhttp)
 }
